@@ -17,6 +17,8 @@ export default class Player {
         document.addEventListener("keyup", this.keyup);
     }
     draw(ctx) {
+        this.move();
+        this.collideWithWalls();
         ctx.drawImage(
         this.image,
         this.x,
@@ -24,6 +26,26 @@ export default class Player {
         this.width,
         this.height,
     )}
+
+    collideWithWalls(){
+        //left
+        if (this.x <0) {
+            this.x = 0;
+        }
+        //right
+        if (this.x > this.canvas.width - this.width){
+            this.x = this.canvas.width - this.width;
+        }
+    }
+
+    move() {
+        if(this.rightPressed){
+            this.x += this.velocity;
+        }
+        else if (this.leftPressed) {
+            this.x += -this.velocity;
+        }
+    }
 
     keydown = event => {
         if(event.code == 'ArrowRight'){
@@ -34,12 +56,12 @@ export default class Player {
         }
     };
 
-    keydown = (event) => {
+    keyup = (event) => {
         if (event.code == "ArrowRight") {
-            this.rightPressed = true;
+            this.rightPressed = false;
         }
         if (event.code == "ArrowLeft") {
-            this.leftPressed = true;
+            this.leftPressed = false;
         }
     };
 }
