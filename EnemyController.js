@@ -21,8 +21,9 @@ export default class Enemycontroller {
     moveDownTimer = this.moveDownTimerDefault;
 
 
-  constructor(canvas) {
+  constructor(canvas,enemyBulletController) {
     this.canvas = canvas;
+    this.enemyBulletController = enemyBulletController
     this.createEnemies();
   }
 
