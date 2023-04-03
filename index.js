@@ -13,7 +13,7 @@ background.src = "images/space.png";
 
 const playerBulletController = new BulletController(canvas,5,"red",true);
 const enemyBulletController = new BulletController(canvas,4,'white',false);
-const enemyController = new EnemyController(canvas, enemyBulletController);
+const enemyController = new EnemyController(canvas, enemyBulletController, playerBulletController);
 const player = new Player(canvas, 3, playerBulletController);
 
 function game(){
