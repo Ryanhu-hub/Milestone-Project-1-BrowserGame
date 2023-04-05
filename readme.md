@@ -1,1 +1,1 @@
-Move ship with the arrow keys, and fire with the space bar. Defeat all enemy ships to win!
+Move ship with the arrow keys, and fire with the space bar. Defeat all enemy ships to win!. No 3rd party programs used, and the main inspiration for this game is the Namco arcade cabinet that has the two-in-one combo games of Ms. Pac-Man and Galaga, both games I played in arcades when younger.
